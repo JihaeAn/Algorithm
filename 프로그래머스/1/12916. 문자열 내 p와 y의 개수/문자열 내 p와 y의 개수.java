@@ -3,18 +3,20 @@ class Solution {
         boolean answer = true;
 
         int Psum = 0;
-        int Ssum = 0;
+        int Ysum = 0;
 
-        for(int i = 0; i < s.length(); i++){
-            if(s.substring(i, i+1).equals("p") || s.substring(i, i+1).equals("P")){
+        char[] str = s.toCharArray();
+
+        for(int i = 0; i < str.length; i++){
+            if(str[i] == 'Y' || str[i] == 'y'){
+                Ysum += 1;
+            }else if(str[i] == 'P' || str[i] == 'p'){
                 Psum += 1;
-            }else if(s.substring(i, i+1).equals("y") || s.substring(i, i+1).equals("Y")){
-                Ssum += 1;
             }
         }
-
-        if(Psum != Ssum) answer = false;
-
+    if(Psum != Ysum) {
+        answer = false;
+    }
         return answer;
     }
 }
