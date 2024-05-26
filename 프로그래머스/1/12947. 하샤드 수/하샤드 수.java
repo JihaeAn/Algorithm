@@ -1,6 +1,5 @@
 class Solution {
     public boolean solution(int x) {
-        boolean answer = true;
         String s = x + "";
             String str [] = s.split("");
 
@@ -9,7 +8,7 @@ class Solution {
                 sum += Integer.parseInt(str[i]);
             }
 
-            if(x % sum != 0) answer = false;
+            boolean answer = (x % sum != 0) ? false : true;
         return answer;
     }
 }
