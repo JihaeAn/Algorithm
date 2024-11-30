@@ -1,22 +1,24 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
-        int count = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int [] list = new int[count];
+        // 1. 받을 정수의 크기
+        int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < count; i++) {
-            list[i] = sc.nextInt();
-        }
-        
-        int find = sc.nextInt();
-        
+        // 2. 입력받은 문자열 공백으로 나누어 배열에 저장
+        String[] list = br.readLine().split(" ");
+
+        // 3. 찾을 정수
+        int find = Integer.parseInt(br.readLine());
+
         int result = 0;
-        for(int j = 0; j < list.length; j++) {
-            if( list[j] == find) {
+        for(int j = 0; j < n; j++) {
+            if( Integer.parseInt(list[j]) == find) {
                 result += 1;
             }
         }
