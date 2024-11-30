@@ -19,7 +19,7 @@ public class Main {
         int result = 0;
         for(int j = 0; j < n; j++) {
             if( Integer.parseInt(list[j]) == find) {
-                result += 1;
+                result ++;
             }
         }
         System.out.println(result);
