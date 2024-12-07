@@ -7,15 +7,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        String[] arr = new String[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = br.readLine();
-        }
-
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i].charAt(0));
-            System.out.print(arr[i].charAt(arr[i].length() - 1));
-            System.out.println();
+            String s = br.readLine();
+            System.out.print(s.charAt(0));
+            System.out.println(s.charAt(s.length() - 1));
         }
     }
 }
