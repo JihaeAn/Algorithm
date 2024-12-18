@@ -8,17 +8,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] origin = new int[]{1, 1, 2, 2, 2, 8};
-        int[] newbie = new int[6];
+        StringBuilder sb = new StringBuilder();
+        sb.append(1 - Integer.parseInt(st.nextToken())).append(" ");
+        sb.append(1 - Integer.parseInt(st.nextToken())).append(" ");
+        sb.append(2 - Integer.parseInt(st.nextToken())).append(" ");
+        sb.append(2 - Integer.parseInt(st.nextToken())).append(" ");
+        sb.append(2 - Integer.parseInt(st.nextToken())).append(" ");
+        sb.append(8 - Integer.parseInt(st.nextToken())).append(" ");
 
-        for (int i = 0; i < 6; i++) {
-            int gap = 0;
-            newbie[i] = Integer.parseInt(st.nextToken());
-
-            if (origin[i] != newbie[i]) {
-                gap = origin[i] - newbie[i];
-            }
-            System.out.print(gap + " ");
-        }
+        System.out.println(sb);
     }
 }
