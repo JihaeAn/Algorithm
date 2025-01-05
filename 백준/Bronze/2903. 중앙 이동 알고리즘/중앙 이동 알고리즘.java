@@ -4,21 +4,11 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        int dot = 2;
-        int plus = 1;
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
+        br.close();
 
-        for (int i = 1; i <= n; i++) {
-            if (i == 1) {
-                dot = dot + plus;
-            } else {
-                plus = plus * 2;
-                dot = dot + plus;
-            }
-        }
-
-        System.out.println(dot * dot);
+        int result = (int) Math.pow(Math.pow(2, n) + 1, 2);
+        System.out.println(result);
     }
 }
